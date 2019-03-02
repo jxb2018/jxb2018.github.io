@@ -51,6 +51,7 @@ git commit -m "commit message" [filename]
 -  ```git log --pretty=oneline```
 -  ```git log --oneline```
 -  ```git reflog```
+
 ##### 5.版本前进后退
 - 基于索引值操作
 ```
@@ -70,11 +71,13 @@ git reset --hard HEAD~n
 --soft | 仅仅在本地库移动HEAD指针
 --mixed | 在本地库移动HEAD指针、重置暂存区
 --hard | 在本地库移动HEAD指针、重置暂存区、重置工作区
+
 ##### 6.删除文件并找回
 - 前提：删除前，文件存在时的状态已经提交到了本地库
 - 操作：``` git reset --hard [指针位置] ```
   - 删除操作已经提交到本地库：指针位置指向历史记录
   - 删除操作尚未提交到本地库：指针位置使用HEAD
+
 ##### 7.比较文件差异
 - 将工作区中的文件和暂存区进行比较
 ```
@@ -88,7 +91,9 @@ git diff [本地库中的历史版本] [文件名]
 ``` 
 git diff 
 ```
-##### 8.推送 
+
+##### 8.推送
+
 ###### 方式一：每次都需要输入用户名密码
 - 查看当前所有远程地址别名 
 ``` 
@@ -103,6 +108,7 @@ git remote add [别名] [远程地址]
 git push [别名] [分支名]
 ```
 - 输入用户名及密码
+
 ###### 方式二：修改配置文件，一劳永逸
 - 修改```./.git/config ```文件，
 ```
@@ -111,6 +117,7 @@ url = https:// username:password@github.com/jidianxiaobai/testgit.git
 fetch = +refs/heads/*:refs/remotes/origin/*
 ```
 - ``` git push origin [分支名] ```
+
 ###### 方式三：ssh登陆
 - 在用户家目录下运行命令生成``` .ssh ```密钥目录
 ```
@@ -138,17 +145,21 @@ git remote add origin_ssh git@github.com:用户名/仓库
 ```
 git push origin_ssh [分支]
 ```
+
 ##### 9.拉取(pull=fetch+merge)
 ```
 git fetch [远程仓库别名] [远程分支名]
 git merge [远程地址别名/远程分支名]
 git pull [远程仓库别名] [远程分支名]
 ```
+
 ##### 10.克隆(clone)
 ```
 git clone [远程地址]
 ```
+
 #### 四. 分支管理
+
 - **创建**分支
 ```
 git branch [分支名]
