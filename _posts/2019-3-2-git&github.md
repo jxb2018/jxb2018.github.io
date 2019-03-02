@@ -52,7 +52,9 @@ git commit -m "commit message" [filename]
 -  ```git log --pretty=oneline```
 -  ```git log --oneline```
 -  ```git reflog```
+
 ##### 5.版本前进后退
+
 - 基于索引值操作
 
 ```
