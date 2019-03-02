@@ -66,6 +66,7 @@ git reset --hard HEAD^
 git reset --hard HEAD~n
 ```
 ***注：reset命令的三个参数比较***
+
 参数 | 作用 | 效果
 ---|---|---
 --soft | 仅仅在本地库移动HEAD指针
