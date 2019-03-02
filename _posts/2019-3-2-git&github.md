@@ -7,8 +7,8 @@ author:     jxb2018
 header-img: img/post-bg-ios9-web.jpg
 catalog: 	 true
 tags:
-    - iOS
-    - 定时器
+    - Git
+    - GitHub
 ---
 # Git
 
