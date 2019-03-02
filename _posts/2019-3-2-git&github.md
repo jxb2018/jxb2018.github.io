@@ -65,6 +65,7 @@ git reset --hard HEAD^
 ```
 git reset --hard HEAD~n
 ```
+
 ***注：reset命令的三个参数比较***
 
 参数 | 作用 | 效果
