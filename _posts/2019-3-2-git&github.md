@@ -53,9 +53,6 @@ git commit -m "commit message" [filename]
 -  ```git log --oneline```
 -  ```git reflog```
 ##### 5.版本前进后退
-- 本质
- 
-插入图片
 - 基于索引值操作
 
 ```
