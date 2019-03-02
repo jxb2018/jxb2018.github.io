@@ -1,93 +1,92 @@
 ---
 layout:     post
-title:      GitLab·þÎñÆ÷´î½¨
-subtitle:   ÔÚCentOSÉÏ´î½¨GitLab·þÎñÆ÷
+title:      GitLabæœåŠ¡å™¨æ­å»º
+subtitle:   åœ¨CentOSä¸Šæ­å»ºGitLabæœåŠ¡å™¨
 date:       2019-3-2
 author:     jxb2018
 header-img: img/post-gitlab.jpg
 catalog: 	 true
 tags:
     - CentOS
-    - GitLab
 ---
 #
-## Ò»£º°²×°²¢ÅäÖÃ±ØÒªµÄÒÀÀµ¹ØÏµ
-> ÔÚCentOSÉÏ°²×°ËùÐèµÄÒÀÀµ£ºssh,·À»ðÇ½£¬postfix(ÓÃÓÚÓÊ¼þÍ¨Öª),wget(´ÓÍâÍøÏÂÔØ²å¼þ)
-### 1. °²×°ssh
+## ä¸€ï¼šå®‰è£…å¹¶é…ç½®å¿…è¦çš„ä¾èµ–å…³ç³»
+> åœ¨CentOSä¸Šå®‰è£…æ‰€éœ€çš„ä¾èµ–ï¼šssh,é˜²ç«å¢™ï¼Œpostfix(ç”¨äºŽé‚®ä»¶é€šçŸ¥),wget(ä»Žå¤–ç½‘ä¸‹è½½æ’ä»¶)
+### 1. å®‰è£…ssh
 ```
 sudo yum install -y curl policycoreutils-python openssh-server
 ```
-### 2. ½«SSH·þÎñÉèÖÃ³É¿ª»ú×ÔÆô¶¯
+### 2. å°†SSHæœåŠ¡è®¾ç½®æˆå¼€æœºè‡ªå¯åŠ¨
 ```
 sudo systemctl enable sshd
 ```
-### 3. Æô¶¯SSH·þÎñ
+### 3. å¯åŠ¨SSHæœåŠ¡
 ```
 sudo systemctl start sshd
 ```
-### 4. °²×°·À»ðÇ½
+### 4. å®‰è£…é˜²ç«å¢™
 ```
 yum install firewalld systemd -y
 ```
-### 5. ¿ªÆô·À»ðÇ½
+### 5. å¼€å¯é˜²ç«å¢™
 ```
 service firewalld start
 ```
-### 6. Ìí¼Óhttp·þÎñµ½firewalld
-- **pemmanent±íÊ¾ÓÀ¾ÃÉúÐ§£¬Èô²»¼Ó--permanentÏµÍ³ÏÂ´ÎÆô¶¯ºó¾Í»áÊ§Ð§¡£**
+### 6. æ·»åŠ httpæœåŠ¡åˆ°firewalld
+- **pemmanentè¡¨ç¤ºæ°¸ä¹…ç”Ÿæ•ˆï¼Œè‹¥ä¸åŠ --permanentç³»ç»Ÿä¸‹æ¬¡å¯åŠ¨åŽå°±ä¼šå¤±æ•ˆã€‚**
 ```
 sudo firewall-cmd --permanent --add-service=http
 ```
-### 7. ÖØÆô·À»ðÇ½
+### 7. é‡å¯é˜²ç«å¢™
 ```
 sudo systemctl reload firewalld
 ```
-### 8. °²×°PostfixÒÔ·¢ËÍÍ¨ÖªÓÊ¼þ
+### 8. å®‰è£…Postfixä»¥å‘é€é€šçŸ¥é‚®ä»¶
 ```
 sudo yum install postfix
 ```
-### 9.½«postfix·þÎñÉèÖÃ³É¿ª»ú×ÔÆô¶¯
+### 9.å°†postfixæœåŠ¡è®¾ç½®æˆå¼€æœºè‡ªå¯åŠ¨
 ```
 sudo systemctl enable postfix
 ```
-### 10.Æô¶¯postfix
+### 10.å¯åŠ¨postfix
 ```
 sudo systemctl start postfix
 ```
-- **ÔÚ°²×°PostfixÆÚ¼ä£¬¿ÉÄÜ»á³öÏÖÅäÖÃÆÁÄ»¡£Ñ¡Ôñ¡°Internet Site¡±²¢°´enter¼ü¡£Ê¹ÓÃÄúµÄ·þÎñÆ÷µÄÍâ²¿DNSÒÔ¡°mail name¡±²¢°´enter¡£Èç¹û³öÏÖ¶îÍâµÄÆÁÄ»£¬¼ÌÐø°´enter¼ü½ÓÊÜÄ¬ÈÏÖµ¡£**
-### 11.°²×°wget
+- **åœ¨å®‰è£…PostfixæœŸé—´ï¼Œå¯èƒ½ä¼šå‡ºçŽ°é…ç½®å±å¹•ã€‚é€‰æ‹©â€œInternet Siteâ€å¹¶æŒ‰enteré”®ã€‚ä½¿ç”¨æ‚¨çš„æœåŠ¡å™¨çš„å¤–éƒ¨DNSä»¥â€œmail nameâ€å¹¶æŒ‰enterã€‚å¦‚æžœå‡ºçŽ°é¢å¤–çš„å±å¹•ï¼Œç»§ç»­æŒ‰enteré”®æŽ¥å—é»˜è®¤å€¼ã€‚**
+### 11.å®‰è£…wget
 ```
 yum -y install wget
 ```
-## ¶þ¡¢²¿ÊðGitLab·þÎñÆ÷
-### 1.Ìí¼Ógitlab¾µÏñ
+## äºŒã€éƒ¨ç½²GitLabæœåŠ¡å™¨
+### 1.æ·»åŠ gitlabé•œåƒ
 ```
 wget https://mirrors.tuna.tsinghua.edu.cn/gitlab-ce/yum/el7/gitlab-ce-10.8.2-ce.0.el7.x86_64.rpm
 ```
-> Èç¹ûÏÂÔØËÙ¶È¹ýÂý
-> 1. Ò²¿ÉÒÔÔÚ``` gitlab.com ```ÏÂÔØ
+> å¦‚æžœä¸‹è½½é€Ÿåº¦è¿‡æ…¢
+> 1. ä¹Ÿå¯ä»¥åœ¨``` gitlab.com ```ä¸‹è½½
 > ``` gitlab-ce-10.8.2-ce.0.el7.x86_64.rpm ```
-> 2. xshellÔ¶³ÌÁ¬½ÓÐéÄâÖ÷»ú£¬rpm°üÅ×ÉÏÈ¥
+> 2. xshellè¿œç¨‹è¿žæŽ¥è™šæ‹Ÿä¸»æœºï¼ŒrpmåŒ…æŠ›ä¸ŠåŽ»
 
-### 2.°²×°gitlab
+### 2.å®‰è£…gitlab
 ```
 rpm -i gitlab-ce-10.8.2-ce.0.el7.x86_64.rpm
 ```
-### 3.ÐÞ¸ÄgitlabÅäÖÃÎÄ¼þÖ¸¶¨·þÎñÆ÷ipºÍ×Ô¶¨Òå¶Ë¿Ú
+### 3.ä¿®æ”¹gitlabé…ç½®æ–‡ä»¶æŒ‡å®šæœåŠ¡å™¨ipå’Œè‡ªå®šä¹‰ç«¯å£
 ```
 vim  /etc/gitlab/gitlab.rb
 ```
-> external_url 'http:·þÎñÆ÷ip:¶Ë¿Ú'
+> external_url 'http:æœåŠ¡å™¨ip:ç«¯å£'
 
-> ps:×¢ÒâÕâÀïÉèÖÃµÄ¶Ë¿Ú²»ÄÜ±»Õ¼ÓÃ£¬Ä¬ÈÏÊÇ8080¶Ë¿Ú£¬Èç¹û8080ÒÑ¾­Ê¹ÓÃ£¬Çë×Ô¶¨ÒåÆäËü¶Ë¿Ú£¬²¢ÔÚ·À»ðÇ½ÉèÖÃ¿ª·ÅÏà¶ÔÓ¦µÃ¶Ë¿Ú
-### 4.ÖØÖÃ²¢Æô¶¯GitLab
+> ps:æ³¨æ„è¿™é‡Œè®¾ç½®çš„ç«¯å£ä¸èƒ½è¢«å ç”¨ï¼Œé»˜è®¤æ˜¯8080ç«¯å£ï¼Œå¦‚æžœ8080å·²ç»ä½¿ç”¨ï¼Œè¯·è‡ªå®šä¹‰å…¶å®ƒç«¯å£ï¼Œå¹¶åœ¨é˜²ç«å¢™è®¾ç½®å¼€æ”¾ç›¸å¯¹åº”å¾—ç«¯å£
+### 4.é‡ç½®å¹¶å¯åŠ¨GitLab
 ```
 gitlab-ctl reconfigure
 gitlab-ctl restart
 ```
-> ÌáÊ¾  "ok: run:"±íÊ¾Æô¶¯³É¹¦
+> æç¤º  "ok: run:"è¡¨ç¤ºå¯åŠ¨æˆåŠŸ
 
-### 5.·ÃÎÊGitLabÒ³Ãæ
-> Èç¹ûÃ»ÓÐÓòÃû£¬Ö±½ÓÊäÈë·þÎñÆ÷ipºÍÖ¸¶¨¶Ë¿Ú½øÐÐ·ÃÎÊ
+### 5.è®¿é—®GitLabé¡µé¢
+> å¦‚æžœæ²¡æœ‰åŸŸåï¼Œç›´æŽ¥è¾“å…¥æœåŠ¡å™¨ipå’ŒæŒ‡å®šç«¯å£è¿›è¡Œè®¿é—®
  
-> ³õÊ¼ÕË»§: root ÃÜÂë:5iveL!fe
+> åˆå§‹è´¦æˆ·: root å¯†ç :5iveL!fe
