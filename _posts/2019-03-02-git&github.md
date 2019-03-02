@@ -10,7 +10,7 @@ tags:
     - CentOS
     - GitLab
 ---
-
+#
 ## 一：安装并配置必要的依赖关系
 > 在CentOS上安装所需的依赖：ssh,防火墙，postfix(用于邮件通知),wget(从外网下载插件)
 ### 1. 安装ssh
