@@ -10,6 +10,7 @@ tags:
     - Git
     - GitHub
 ---
+
 #### 一.本地库初始化
 
 ```
@@ -184,3 +185,15 @@ git checkout [分支名]
   2. 编辑满意之后保存退出
   3. ``` git add [文件名] ```
   4. ``` git commmit -m "commit message" ```
+ 
+
+
+
+
+
+
+
+
+
+
+
