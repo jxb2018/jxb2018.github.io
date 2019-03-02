@@ -4,7 +4,7 @@ title:      Git命令行操作
 subtitle:   使用Git进行版本控制
 date:       2019-3-2
 author:     jxb2018
-header-img: img/post-bg-ios9-web.jpg
+header-img: img/post-git&github.png
 catalog: 	 true
 tags:
     - Git
