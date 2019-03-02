@@ -23,7 +23,7 @@ git init
 git config user.name jidianxiaobai
 git config user.email 1369375419@qq.com
 ```
-==注意==：信息保存在 ```./.git/config```文件中
+注意：信息保存在 ```./.git/config```文件中
 
 - **方式二：系统用户级别**
 
@@ -31,7 +31,7 @@ git config user.email 1369375419@qq.com
 git config --global user.name jidianxiaobai
 git config --global user.email 1369375419@qq.com
 ```
-==注意==：信息保存在 ```~/.gitconfig```文件中
+注意：信息保存在 ```~/.gitconfig```文件中
 
 #### 三. 基本操作
 ##### 1.状态查看 --> 查看==工作区、暂存区==状态 
@@ -72,7 +72,7 @@ git reset --hard HEAD^
 ```
 git reset --hard HEAD~n
 ```
-==***注：reset命令的三个参数比较***==
+***注：reset命令的三个参数比较***
 
 参数 | 作用 | 效果
 ---|---|---
@@ -87,11 +87,11 @@ git reset --hard HEAD~n
   - 删除操作尚未提交到本地库：指针位置使用HEAD
 ##### 7.比较文件差异
 - 将工作区中的文件和暂存区进行比较
- ```
+```
 git diff [文件名] 
 ```
 - 将工作区中的文件和本地库历史记录比较
- ```
+```
 git diff [本地库中的历史版本] [文件名]
 ```
 - 不带文件名比较多个文件
@@ -148,35 +148,32 @@ git remote add origin_ssh git@github.com:用户名/仓库
 ```
 git push origin_ssh [分支]
 ```
-##### 9.拉取 ==(pull=fetch+merge)==
+##### 9.拉取(pull=fetch+merge)
 ```
 git fetch [远程仓库别名] [远程分支名]
 git merge [远程地址别名/远程分支名]
 git pull [远程仓库别名] [远程分支名]
-
 ```
-##### 10.克隆
+
+##### 10.克隆(clone)
 ```
 git clone [远程地址]
 ```
 
 #### 四. 分支管理
-##### 分支管理概念
-
-##### 分支操作
-- ==创建==分支
+- **创建**分支
 ```
 git branch [分支名]
 ```
-- ==查看==分支
+- **查看**分支
 ```
 git branch -v
 ```
-- ==切换==分支
+- **切换**分支
 ```
 git checkout [分支名]
 ```
-- ==合并==分支
+- **合并**分支
   1. ``` git checkout [要合并在的分支] ```
   2. ``` git merge [要被合并的分支] ```
  
