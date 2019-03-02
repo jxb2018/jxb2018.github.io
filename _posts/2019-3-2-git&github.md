@@ -35,7 +35,6 @@ git config --global user.email 1369375419@qq.com
 
 #### 三. 基本操作
 ##### 1.状态查看 --> 查看==工作区、暂存区==状态 
-
 ```
 git status
 ```
@@ -52,33 +51,25 @@ git commit -m "commit message" [filename]
 -  ```git log --pretty=oneline```
 -  ```git log --oneline```
 -  ```git reflog```
-
 ##### 5.版本前进后退
-
 - 基于索引值操作
-
 ```
 git reset --hard [局部索引值]
 ```
-
 - 使用^符号，只能后退(==有几个回退几步==)
-
 ```
 git reset --hard HEAD^
 ```
-
 - 使用~符号，只能后退(==n表示回退n步==)
 ```
 git reset --hard HEAD~n
 ```
 ***注：reset命令的三个参数比较***
-
 参数 | 作用 | 效果
 ---|---|---
 --soft | 仅仅在本地库移动HEAD指针
 --mixed | 在本地库移动HEAD指针、重置暂存区
 --hard | 在本地库移动HEAD指针、重置暂存区、重置工作区
-
 ##### 6.删除文件并找回
 - 前提：删除前，文件存在时的状态已经提交到了本地库
 - 操作：``` git reset --hard [指针位置] ```
@@ -153,12 +144,10 @@ git fetch [远程仓库别名] [远程分支名]
 git merge [远程地址别名/远程分支名]
 git pull [远程仓库别名] [远程分支名]
 ```
-
 ##### 10.克隆(clone)
 ```
 git clone [远程地址]
 ```
-
 #### 四. 分支管理
 - **创建**分支
 ```
@@ -175,8 +164,6 @@ git checkout [分支名]
 - **合并**分支
   1. ``` git checkout [要合并在的分支] ```
   2. ``` git merge [要被合并的分支] ```
- 
-
 - 解决冲突
   1. ``` vim [filename] ``` ,删除特殊符号
   2. 编辑满意之后保存退出
