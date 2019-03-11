@@ -7,8 +7,7 @@ author:     jxb2018
 header-img: img/home-bg.jpg
 catalog: 	 true
 tags:
-    - 静态IP
-    - ubuntu
+    - 图论
 ---
 >   拓扑排序(Topological sorting)是对于有向无圈图顶点的一种排序
 
